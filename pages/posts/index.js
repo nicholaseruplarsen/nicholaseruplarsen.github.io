@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "../../styles/Home.module.css";
+import styles from "../../styles/Header.module.css";
 import { GraphQLClient, gql } from "graphql-request";
 // import BlogCard from "../../components/BlogCard";
 import BlogXD from "../../components/BlogXD";
@@ -48,38 +48,36 @@ export async function getStaticProps() {
 
 
 
-// export default function Posts({ posts }) {
-//   return (
-//     <div className={styles.gpt3__header} id="home">
-//     <div className={styles.gpt3__header_content}>
-//             <p className={styles.typed_out}>COMING SOON :).</p>
-//     </div>
-// </div>
-//   );
-// }
-
-
 export default function Posts({ posts }) {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Nicholas Erup Larsen</title>
-        <meta name="description" content="A blog tutorial made with JAMstack" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        {posts.map((post) => (
-          <BlogXD
-            title={post.title}
-            author={post.author}
-            coverPhoto={post.coverPhoto}
-            key={post.id}
-            datePublished={post.datePublished}
-            slug={post.slug}
-          />
-        ))}
-      </main>
-    </div>
+    <div style={{ marginBottom: "100%" }}>
+    <p className={styles.typed_out}>Posts coming soon. The license to the back-end SaaS has expired since last summer.</p>
+  </div>
   );
 }
+
+
+// export default function Posts({ posts }) {
+//   return (
+//     <div className={styles.container}>
+//       <Head>
+//         <title>Nicholas Erup Larsen</title>
+//         <meta name="description" content="A blog tutorial made with JAMstack" />
+//         <link rel="icon" href="/favicon.ico" />
+//       </Head>
+
+//       <main className={styles.main}>
+//         {posts.map((post) => (
+//           <BlogXD
+//             title={post.title}
+//             author={post.author}
+//             coverPhoto={post.coverPhoto}
+//             key={post.id}
+//             datePublished={post.datePublished}
+//             slug={post.slug}
+//           />
+//         ))}
+//       </main>
+//     </div>
+//   );
+// }
