@@ -51,7 +51,7 @@ export async function getStaticProps() {
 export default function Posts({ posts }) {
   return (
     <div style={{ marginBottom: "100%" }}>
-    <p className={styles.typed_out}>Posts coming soon. The license to the back-end SaaS has expired since last summer.</p>
+    <p className={styles.typed_out}>Posts coming soon. The license to the back-end SaaS I was using has expired since last summer.</p>
   </div>
   );
 }
