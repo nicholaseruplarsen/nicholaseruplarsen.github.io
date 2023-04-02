@@ -58,8 +58,8 @@ function Timeline(){
             <h6>Freelance for YouTubers / Twitch Streamers (50-500k YT subcribers)</h6>
             <p>
             • 4-5.5 million total accumulated views on my own channel and others<br />
-            • Used Adobe Premiere Pro as primary editing tool for all videos. Some of my work: <a className={styles.animation} href="https://www.youtube.com/watch?v=Vg8a9jWai_g">"Project Fire" #1</a>,&nbsp;
-            <a className={styles.animation} href="https://www.youtube.com/watch?v=TRU7F8gcCyE">"Project Fire" #2</a><br />
+            • Used Adobe Premiere Pro as primary editing tool for all videos. Some of my work: <a className={styles.animation} href="https://www.youtube.com/watch?v=Vg8a9jWai_g">&quot;Project Fire&quot; #1</a>,&nbsp;
+            <a className={styles.animation} href="https://www.youtube.com/watch?v=TRU7F8gcCyE">&quot;Project Fire&quot; #2</a><br />
             • Proficient in Adobe Photoshop to create thumbnails and a bunch of other image manipulation since I was 11 years old<br />
             </p>
           </div>
