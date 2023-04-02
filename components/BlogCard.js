@@ -22,7 +22,7 @@ function BlogPost({ title, author, coverPhoto, datePublished, slug }) {
             <h2>{title}</h2>
               <div className={styles.details}>
                 <div className={styles.author}>
-                  <img src={author.avatar.url} alt={author.name} />
+                  <Image src={author.avatar.url} alt={author.name} />
                 <h3>{author.name}</h3>
                 </div>
                 <div className={styles.date}>
