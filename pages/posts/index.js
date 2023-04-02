@@ -45,6 +45,20 @@ export async function getStaticProps() {
   };
 }
 
+
+
+
+// export default function Posts({ posts }) {
+//   return (
+//     <div className={styles.gpt3__header} id="home">
+//     <div className={styles.gpt3__header_content}>
+//             <p className={styles.typed_out}>COMING SOON :).</p>
+//     </div>
+// </div>
+//   );
+// }
+
+
 export default function Posts({ posts }) {
   return (
     <div className={styles.container}>
