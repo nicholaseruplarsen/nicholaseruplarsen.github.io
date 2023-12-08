@@ -2,6 +2,7 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import Link from 'next/link';
 import CoursesTable from './coursestable';
+import { useRouter } from 'next/router'
 
 export default function Home() {
   const socialsize = 50;
@@ -9,20 +10,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       
-      
       {/* Background image */}
-      {/* <img alt="Blurred discs" width="2400" height="1800" decoding="async" data-nimg="1" src="bg.webp" className={styles.scale} style={{ filter: "blur(50px)", color: "transparent", translate: "none", rotate: "none", scale: "none", opacity: 0.85, visibility: "inherit", position: "absolute", top: 0, left: 0, zIndex: -1, }} /> */}
-      {/* <Image
-        alt="Blurred discs"
-        width={2400}
-        height={1800}
-        src="/bg.webp"
-        className={styles.scale}
-        style={{ filter: "blur(50px)", opacity: 0.85 }}
-        decoding="async"
-        priority // if it's a priority image for LCP
-      /> */}
-      
       <div className={styles.backgroundImage}></div>
 
       {/* Navigation bar */}
