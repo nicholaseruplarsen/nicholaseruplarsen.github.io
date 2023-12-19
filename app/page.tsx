@@ -2,13 +2,17 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import Link from 'next/link';
 import CoursesTable from './coursestable';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 
 export default function Home() {
   const socialsize = 50;
+  // const router = useRouter();
+
   
   return (
     <main className={styles.main}>
+
+      <link rel="icon" href="image/favicon.ico" sizes="any"/>
       
       {/* Background image */}
       <div className={styles.backgroundImage}></div>
@@ -16,7 +20,7 @@ export default function Home() {
       {/* Navigation bar */}
       <div className={styles.nav}>
         <Link href="/" className={styles.animation}>Home</Link>
-        <Link href="/" className={styles.animation}>Projects</Link>
+        <Link href="/projects" className={styles.animation}>Projects</Link>
       </div>
 
 
@@ -96,7 +100,7 @@ export default function Home() {
 
       {/* Grid at the bottom */}
       <div className={styles.grid}>
-        <Link href="/" className={styles.card}>
+        <Link href="/projects" className={styles.card}>
           <h2>
             Projects <span>-&gt;</span>
           </h2>
