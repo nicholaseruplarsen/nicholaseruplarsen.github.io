@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import styles from './page.module.css'
 import Link from 'next/link';
@@ -6,9 +8,8 @@ import { useRouter } from 'next/navigation'
 
 export default function Home() {
   const socialsize = 50;
-  // const router = useRouter();
+  const timelinesize = 135;
 
-  
   return (
     <main className={styles.main}>
 
@@ -20,7 +21,7 @@ export default function Home() {
       {/* Navigation bar */}
       <div className={styles.nav}>
         <Link href="/" className={styles.animation}>Home</Link>
-        <Link href="/projects" className={styles.animation}>Projects</Link>
+        <Link href="/" className={styles.animation}>Projects</Link>
       </div>
 
 
@@ -37,7 +38,7 @@ export default function Home() {
           <div className={styles.timespan}>Today</div>
           <div className={styles.ico}>
             <div className={styles.entry_dot} />
-              <img src="DTU logo.svg"  alt="DTU logo"></img>
+              <Image src="DTU logo.svg" width={timelinesize} height={timelinesize} alt="DTU logo"></Image>
           </div>
           <div className={styles.desc}>
             <CoursesTable />
@@ -46,7 +47,7 @@ export default function Home() {
           <div className={styles.timespan}>2021 to 2022</div>
           <div className={styles.ico}>
             <div className={styles.entry_dot}>
-              <img src="CVPL logo.svg"  alt="CVPL logo"></img>
+              <Image src="CVPL logo.svg" width={timelinesize} height={timelinesize}  alt="CVPL logo"></Image>
             </div>
           </div>
           <div className={styles.desc}>
@@ -67,7 +68,7 @@ export default function Home() {
           <div className={styles.timespan}>2014 to 2021</div>
           <div className={styles.fadetimespan}>
             <div className={styles.entry_dot} />
-              <img src="Adobe logo (gradient).svg"  alt="Adobe logo"></img>
+              <Image src="Adobe logo (gradient).svg" width={timelinesize} height={timelinesize}  alt="Adobe logo"></Image>
             </div>
             <div className={styles.desc}>
               <h2>Video editing and thumbnail creation</h2>
@@ -85,22 +86,22 @@ export default function Home() {
       {/* Social media links */}
       <div className={styles.socials}>
         <Link href="https://www.youtube.com/user/TheMrKofiX" className={styles.icon} target="_blank" rel="noopener noreferrer">
-          <img src="youtube.svg" width={socialsize} height={socialsize} alt="YouTube"></img>
+          <Image src="youtube.svg" width={socialsize} height={socialsize} alt="YouTube"></Image>
         </Link>
         <Link href="https://www.linkedin.com/in/nicholas-erup-larsen-a2134010b/" className={styles.icon} target="_blank" rel="noopener noreferrer">
-          <img src="linkedin.svg" width={socialsize} height={socialsize} alt="LinkedIn"></img>
+          <Image src="linkedin.svg" width={socialsize} height={socialsize} alt="LinkedIn"></Image>
         </Link>
         <Link href="https://twitter.com/olasbondolas" className={styles.icon} target="_blank" rel="noopener noreferrer">
-          <img src="twitter.svg" width={socialsize} height={socialsize} alt="Twitter"></img>
+          <Image src="twitter.svg" width={socialsize} height={socialsize} alt="Twitter"></Image>
         </Link>
         <Link href="https://github.com/olasbondolas" className={styles.icon} target="_blank" rel="noopener noreferrer">
-          <img src="github.svg" width={socialsize} height={socialsize} alt="Discord"></img>
+          <Image src="github.svg" width={socialsize} height={socialsize} alt="Discord"></Image>
         </Link>
       </div>
 
       {/* Grid at the bottom */}
       <div className={styles.grid}>
-        <Link href="/projects" className={styles.card}>
+        <Link href="/" className={styles.card}>
           <h2>
             Projects <span>-&gt;</span>
           </h2>
