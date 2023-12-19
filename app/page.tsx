@@ -38,7 +38,7 @@ export default function Home() {
           <div className={styles.timespan}>Today</div>
           <div className={styles.ico}>
             <div className={styles.entry_dot} />
-              <Image src="DTU logo.svg" width={timelinesize} height={timelinesize} alt="DTU logo"></Image>
+              <Image src="DTU logo.svg" className={styles.imgLight} width={timelinesize} height={timelinesize} alt="DTU logo"></Image>
           </div>
           <div className={styles.desc}>
             <CoursesTable />
@@ -47,7 +47,7 @@ export default function Home() {
           <div className={styles.timespan}>2021 to 2022</div>
           <div className={styles.ico}>
             <div className={styles.entry_dot}>
-              <Image src="CVPL logo.svg" width={timelinesize} height={timelinesize}  alt="CVPL logo"></Image>
+              <Image src="CVPL logo.svg" className={styles.imgLight} width={timelinesize} height={timelinesize}  alt="CVPL logo"></Image>
             </div>
           </div>
           <div className={styles.desc}>
@@ -66,9 +66,9 @@ export default function Home() {
           </div>
 
           <div className={styles.timespan}>2014 to 2021</div>
-          <div className={styles.fadetimespan}>
+          <div className={styles.fadeico}>
             <div className={styles.entry_dot} />
-              <Image src="Adobe logo (gradient).svg" width={timelinesize} height={timelinesize}  alt="Adobe logo"></Image>
+              <Image src="Adobe logo (gradient).svg" className={styles.imgLight} width={timelinesize} height={timelinesize}  alt="Adobe logo"></Image>
             </div>
             <div className={styles.desc}>
               <h2>Video editing and thumbnail creation</h2>
@@ -110,8 +110,9 @@ export default function Home() {
       </div>
 
       <div className={styles.ranks}>
-        <div>
-        <img src="diamond.webp" width="40%" height="40%"  decoding="async" alt="Diamond 4"/>
+        <div className={styles.ranksimg} >
+        {/* <img src="diamond.webp" min-width="40%" max-width="40%" width="40%" height="40%"  decoding="async" alt="Diamond 4"/> */}
+        <Image className={styles.ranksimg} src="/diamond.webp" width={192} height={155} decoding="async" alt="Diamond 4"/>
           <h4>Diamond 4</h4>
           <h6>
             Ladder rank: 36,826 (top <Link 
@@ -123,8 +124,9 @@ export default function Home() {
           </h6>
         </div>
         
-        <div>
-          <img src="Gladiator.webp" width="25%" height="25%" decoding="async" alt="Gladiator"/>
+        <div className={styles.ranksimg} >
+          {/* <img src="gladiator.webp" min-width="250px" max-width="250px" width="25%" height="25%" decoding="async" alt="Gladiator"/> */}
+          <Image src="/gladiator.webp" width={130} height={155} decoding="async" alt="Gladiator"/>
           <h4>2406 rated Elite (2v2)</h4>
           <h6>
             Ladder rank: 1353 (top &#126;<Link 

@@ -3,8 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
-  padding-top: 2rem;
+  padding: 2rem 6rem 6rem;  /* Combined padding-top with other paddings */
   min-height: 100vh;
 }
 
@@ -12,40 +11,34 @@
   font-weight: 500;
   font-size: 14px;
   padding-bottom: 0.5rem;
-  color: #717890
+  color: #717890;
 }
+
+/* .main p {
+  font-size: 14px;
+  line-height: 18px;;
+} */
 
 .backgroundImage {
-  background-image: url('/bg.webp'); /* Path to your image */
-  background-size: cover; /* Cover the entire area */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  filter: blur(50px); /* Apply blur */
-  opacity: 0.85; /* Set opacity */
-  position: absolute; /* Positioning */
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  z-index: -1; /* Send it to the back */
-  top: 30%; /* Adjust this value to push the image further down */
-  right: 0%;
-
+  background: url('/bg.webp') no-repeat center center / cover; /* Shorthand for background properties */
+  filter: blur(50px);
+  opacity: 0.85;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 30%;
+  right: 0;
 }
 
-/* Navigation */
 .nav {
   display: flex;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding: 2rem 0;  /* Combined padding-top with padding-bottom */
   font-size: 1.2rem;
 }
 
 .nav a {
   margin-right: 2rem;
-}
-
-.navlinks {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 .animation {
@@ -71,10 +64,7 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-/* Navigation */
 
-
-/* Nicholas Erup Larsen */
 .header {
   margin-top: 1rem;
   display: inline;
@@ -86,27 +76,22 @@
   font-weight: 600;
   line-height: 120%;
   white-space: nowrap;
-  
   background: linear-gradient(45deg,#f83a3a 10%,#f13dd4 50%,#7000ff 90%);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent; /* Changed for better browser support */
 }
 
 .header h4 {
   font-weight: 500;
-  color: #717890
+  color: #717890;
 }
-/* Nicholas Erup Larsen */
 
-
-/* Grid */
 .grid {
   display: grid;
-  grid-template-columns: repeat(1, minmax(100%, auto));
+  grid-template-columns: 100%;  /* Simplified the repeat function */
   gap: 2rem;
   align-items: center;
-
 }
 
 .card {
@@ -134,16 +119,11 @@
   line-height: 1.5;
   max-width: 30ch;
 }
-/* Grid */
 
-
-/* Social media icons */
 .socials {
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(4, minmax(25%, auto));
-  max-width: 100%;
   margin-bottom: 5rem;
 }
 
@@ -152,39 +132,31 @@
   max-width: 250px;
   margin-right: 5rem;
   margin-left: 4rem;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
-/* Social media icons */
-
 
 /* Timeline */
-
 .container {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding: 5rem 0;  /* Combined padding-top with padding-bottom */
   line-height: 24px;
   min-width: 40rem; /* FIXED EVERYTHING WHEN RESIZING*/
   max-width: 70rem;
 }
 
-.container h1 {
-  background: linear-gradient(60deg,#f83a3a 10%,#f13dd4 30%,#7000ff 90%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
+.container h1, /* Combine shared styles for h1, h2 */
 .container h2 {
-  background: linear-gradient(45deg,#f83a3a 10%,#f13dd4 20%,#7000ff 40%);
+  background-image: linear-gradient(60deg,#f83a3a 10%,#f13dd4 30%,#7000ff 90%);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent; /* Changed for better browser support */
 }
 
-
+.containerimg {
+  width: 150;
+  height: 150;
+}
 
 .row {
   display: grid;
@@ -212,16 +184,13 @@
 }
 
 .ico {
-  grid-column: span 1;
   top: 5px;
-  vertical-align: top;
   border-left: 2px solid var(--timeline-color);
   position: relative;
 }
 
-.fadetimespan {
+.fadeico {
   top: 5px;
-  vertical-align: top;
   border-left: 2px solid;
   border-image: 
   linear-gradient(
@@ -253,39 +222,143 @@
 /* Timeline */
 
 
-
-/* League and WoW ranks */
 .ranks {
   display: grid;
   grid-template-columns: repeat(2, minmax(50%, auto));
   align-items: center;
   text-align: center;
-  word-wrap: nowrap;
-  padding-top: 5rem;
+  padding-top: 0rem;
 }
 
-.ranks img {
+.ranksimg {
+  margin: 5rem;
+}
+
+.ranksimg img {
   display: grid;
   margin: auto;
   padding-bottom: 2rem;
+  display: block;
+  margin: auto;
 }
 
 .ranks h4 {
   font-weight: 600;
   padding-bottom: 1rem;
-  color: #ffffff
+  color: #ffffff;
 }
 
 .ranks h6 {
   font-weight: 500;
   font-size: 14px;
   padding-bottom: 0.5rem;
-  color: #717890
+  color: #717890;
+  white-space: nowrap;
+
 }
-/* League and WoW ranks */
 
 
-/* Enable hover only on non-touch devices */
+@media (max-width: 700px), /* Combined media queries for both ranges */
+(min-width: 701px) and (max-width: 1120px) {
+  .main {
+  padding: 2rem 6rem 6rem;  /* Combined padding-top with other paddings */
+  }
+  .header h1{
+    font-size: 32px;
+  }
+
+  .main h4 {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .main h6 {
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .main p {
+    font-size: 12px;
+  }
+  .ranks {
+    padding-top: 2rem;
+
+  }
+
+  .ranks h4,
+  .ranks h6 {
+    padding-bottom: 0.2rem;
+  }
+
+  .container h2 {
+    font-size: 24px
+  }
+  
+  .container {
+    padding: 5rem 0;  /* Combined padding-top with padding-bottom */
+    line-height: 24px;
+    min-width: 600px; /* FIXED EVERYTHING WHEN RESIZING*/
+  }
+
+  .ico {
+    border-left: 0px;
+    border-right: 2px solid var(--timeline-color);
+    margin-right: 1rem;
+    margin-left: 0rem;
+  }  
+
+  .fadeico {
+    border-left: 0px;
+    border-right: 2px solid var(--timeline-color);
+    margin-right: 1rem;
+    margin-left: 0rem;
+  }  
+
+  .timespan {
+    min-width: 5rem;
+  }
+
+  .entry_dot {
+    position: absolute;
+    left: 23.5px;
+  }
+
+  .imgLight {
+    display: none;
+  }
+
+  .desc {
+    padding-left: 0px;
+    max-width: 400px;
+  }
+
+  .ranksimg {
+    margin: 1rem;
+  }
+  
+}
+
+@media (prefers-color-scheme: dark) {
+  .vercelLogo,
+  .logo { /* Combined the styles for .vercelLogo and .logo */
+    filter: invert(1);
+  }
+  .logo {
+    box-shadow: 0 0 0.3rem #ffffff70; /* Changed drop-shadow to box-shadow for better cross-browser support */
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+
+
+
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
     background: rgba(var(--card-rgb), 0.1);
@@ -307,49 +380,3 @@
     transform: none;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Mobile */
-@media (max-width: 700px) {
-  .container {
-    max-width: 100%; /* Or set a fixed pixel value that looks good on half screen */
-  }
-}
-
-/* Tablet and Smaller Desktop */
-@media (min-width: 701px) and (max-width: 1120px) {
-  .container {
-    max-width: 100%; /* Or set a fixed pixel value that looks good on half screen */
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-
