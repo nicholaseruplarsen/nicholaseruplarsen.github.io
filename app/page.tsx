@@ -124,7 +124,7 @@ export default function Home() {
         </div>
         
         <div>
-          <img src="Gladiator.webp" width="25%" height="25%" decoding="async" alt="Gladiator"/>
+          <img src="gladiator.webp" width="25%" height="25%" decoding="async" alt="Gladiator"/>
           <h4>2406 rated Elite (2v2)</h4>
           <h6>
             Ladder rank: 1353 (top &#126;<Link 
