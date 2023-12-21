@@ -10,6 +10,7 @@ import youtube from '../public/svgs/youtube.svg';
 import linkedin from '../public/svgs/linkedin.svg';
 import twitter from '../public/svgs/twitter.svg';
 import github from '../public/svgs/github.svg';
+import profilbillede from '../public/Profilbillede.png';
 
 export default function Home() {
   const timelinesize = 135;
@@ -37,11 +38,22 @@ export default function Home() {
       </div>
 
 
-      {/* Header */}
+      {/* Header without profile picture */}
       <div className={styles.header}>
         <h1 className={styles.header}>Nicholas Erup Larsen</h1><br/>
         <h4 className={styles.header}>4th semester, studying AI & Data at DTU. 21 years old. <Image src="danish.svg" width={15} height={10} alt="Flag"/></h4>
       </div>
+
+      {/* Header with profile picture */}
+      {/* <div className={styles.headerrow}>
+        <div className={styles.header}>
+          <h1 className={styles.header}>Nicholas Erup Larsen</h1><br/>
+          <h4 className={styles.header}>4th semester, studying AI & Data at DTU. 21 years old. <Image src="danish.svg" width={15} height={10} alt="Flag"/></h4>
+        </div>
+        <div className={styles.headerimg}>
+          <Image src={profilbillede} className={styles.imgLight} width={100} height={100} alt="Profilbillede" />
+        </div>
+      </div> */}
 
 
       {/* Timeline - maybe split into education and work?*/}
@@ -134,7 +146,8 @@ export default function Home() {
       </div>
       </div>
 
-      {/* Grid at the bottom */}
+
+      {/* Projects call to action */}
       <div className={styles.cont}>
       <div className={styles.grid}>
         <Link href="/projects" className={styles.card}>
@@ -145,6 +158,9 @@ export default function Home() {
         </Link>
       </div>
       </div>
+
+
+      {/* Ranks */}
       <div className={styles.cont}>
         <div className={styles.ranks}>
           <div className={styles.ranksimg} >
@@ -176,8 +192,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      
-
     </main>
   )
 }

@@ -66,6 +66,29 @@
   transform-origin: bottom left;
 }
 
+/* 
+.headerrow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 5vh;
+  
+}
+
+.header {
+  margin-top: 1rem;
+  display: inline;
+  text-align: center;
+  grid-column: span 1;
+}
+
+.headerimg {
+  margin-left: 1rem;
+  margin-top: 2vh;
+}
+ */
+
 .header {
   margin-top: 1rem;
   display: inline;
