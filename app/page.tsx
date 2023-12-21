@@ -5,8 +5,9 @@ import styles from './page.module.css'
 import Link from 'next/link';
 import CoursesTable from './coursestable';
 import { useRouter } from 'next/navigation'
-import gladiator from '../public/gladiator.webp'
-import diamond from '../public/diamond.webp'
+import gladiator from '../public/static/gladiator.webp'
+import diamond from '../public/static/diamond.webp'
+
 
 export default function Home() {
   const socialsize = 50;
