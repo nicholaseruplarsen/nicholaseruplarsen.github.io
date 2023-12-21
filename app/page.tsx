@@ -28,7 +28,7 @@ export default function Home() {
       <link rel="icon" href="image/favicon.ico" sizes="any"/>
       
       {/* Background image */}
-      <div className={styles.backgroundImage}></div>
+      <div className={styles.backgroundImage} />
 
       {/* Navigation bar */}
       <div className={styles.nav}>
@@ -150,7 +150,7 @@ export default function Home() {
             <h6>
               Ladder rank: 1353 (top &#126;<Link 
               target="_blank" rel="noopener noreferrer"
-              href="https://ibb.co/gwRfHNY" 
+              href="https://www.reddit.com/r/worldofpvp/comments/looczp/pvp_rating_distribution/" 
               className={styles.animation}>0.47%</Link>)<br/>
               Date achieved: May 22, 2022<br/><br/>
               World of Warcraft: Shadowlands
