@@ -129,7 +129,8 @@ export default function Home() {
         
         <div className={styles.ranksimg} >
           {/* <img src="gladiator.webp" min-width="250px" max-width="250px" width="25%" height="25%" decoding="async" alt="Gladiator"/> */}
-          <Image src={gladiator} width={130} height={155} decoding="async" alt="Gladiator"/>
+          {/* <Image src={gladiator} width={130} height={155} decoding="async" alt="Gladiator"/> */}
+          <Image src="static/gladiator.webp" width={130} height={155} decoding="async" alt="Gladiator"/>
           <h4>2406 rated Elite (2v2)</h4>
           <h6>
             Ladder rank: 1353 (top &#126;<Link 
