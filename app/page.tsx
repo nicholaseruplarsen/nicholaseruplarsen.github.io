@@ -5,13 +5,21 @@ import styles from './page.module.css'
 import Link from 'next/link';
 import CoursesTable from './coursestable';
 import { useRouter } from 'next/navigation'
-import gladiator from '../public/static/gladiator.webp'
+import gladiator from '/public/static/gladiator.webp'
 import diamond from '../public/static/diamond.webp'
 
 
 export default function Home() {
   const socialsize = 50;
   const timelinesize = 135;
+
+  type ImageLoaderProps = {     // TypeScript specific otherwise src is red highlighted in IDE
+    src: string;
+  };
+
+  const loaderProp = ({ src }: ImageLoaderProps) => {     // Fixes next/image not statically loading and returning a 404 error 
+    return src;
+  } 
 
   return (
     <main className={styles.main}>
@@ -115,7 +123,7 @@ export default function Home() {
       <div className={styles.ranks}>
         <div className={styles.ranksimg} >
         {/* <img src="diamond.webp" min-width="40%" max-width="40%" width="40%" height="40%"  decoding="async" alt="Diamond 4"/> */}
-        <Image className={styles.ranksimg} src={diamond} width={192} height={155} decoding="async" alt="Diamond 4"/>
+        <Image className={styles.ranksimg} src={diamond} width={192} height={155} decoding="async" alt="Diamond 4" loader={loaderProp}/>
           <h4>Diamond 4</h4>
           <h6>
             Ladder rank: 36,826 (top <Link 
@@ -129,8 +137,7 @@ export default function Home() {
         
         <div className={styles.ranksimg} >
           {/* <img src="gladiator.webp" min-width="250px" max-width="250px" width="25%" height="25%" decoding="async" alt="Gladiator"/> */}
-          {/* <Image src={gladiator} width={130} height={155} decoding="async" alt="Gladiator"/> */}
-          <Image src="static/gladiator.webp" width={130} height={155} decoding="async" alt="Gladiator"/>
+          <Image src={gladiator} width={130} height={155} decoding="async" alt="Gladiator" loader={loaderProp}/>
           <h4>2406 rated Elite (2v2)</h4>
           <h6>
             Ladder rank: 1353 (top &#126;<Link 
