@@ -122,7 +122,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60vw;
+  width: 80vw;
+  max-width: 60rem;
 }
 
 .socials a {
@@ -167,7 +168,7 @@
 .desc {
   grid-column: span 10;
   padding-top: 2px;
-  padding-bottom: 3em;
+  padding-bottom: 5vh;
   word-wrap: break-word;
 }
 
@@ -226,12 +227,8 @@
   margin-right: 10vw;
 }
 
-.ranksimg img {
-  display: grid;
-  margin: auto;
-  padding-bottom: 2rem;
-  display: block;
-  margin: auto;
+.ranks img {
+  margin-bottom: 1rem;
 }
 
 .ranks h4 {
@@ -252,7 +249,9 @@
   .timespan {
     min-width: 4rem;
   }
-
+  .cont {
+    margin: 3vw;
+  }
 }
 
 @media (max-width: 800px) {
@@ -263,7 +262,12 @@
 
   .main a,
   .main p {
-    font-size: 12px; 
+    font-size: 11px; 
+    line-height: 140%;
+  }
+
+  .header {
+    margin-bottom: 5vw;
   }
 
   .header h1{
@@ -272,13 +276,8 @@
 
   .main h4, 
   .main h6 {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
-  }
-
-  .ranks {
-    padding-top: 2rem;
-
   }
 
   .ranks h4,
@@ -287,7 +286,7 @@
   }
 
   .container h2 {
-    font-size: 20px
+    font-size: 16px
   }
 
   .desc {
@@ -323,11 +322,14 @@
     display: none;
   }
 
-
   .ranksimg {
-    margin: 1rem;
+    margin: 2vw;
   }
-  
+
+  .socials {
+    width: 100vw;
+  }
+
 }
 
 @media (prefers-color-scheme: dark) {

@@ -4,13 +4,14 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import Link from 'next/link';
 import CoursesTable from './(coursestable)';
-import { useRouter } from 'next/navigation'
 import gladiator from '/public/static/gladiator.webp'
 import diamond from '../public/static/diamond.webp'
-
+import youtube from '../public/svgs/youtube.svg';
+import linkedin from '../public/svgs/linkedin.svg';
+import twitter from '../public/svgs/twitter.svg';
+import github from '../public/svgs/github.svg';
 
 export default function Home() {
-  const socialsize = 50;
   const timelinesize = 135;
 
   type ImageLoaderProps = {     // TypeScript specific otherwise src is red highlighted in IDE
@@ -32,7 +33,7 @@ export default function Home() {
       {/* Navigation bar */}
       <div className={styles.nav}>
         <Link href="/" className={styles.animation}>Home</Link>
-        <Link href="/" className={styles.animation}>Projects</Link>
+        <Link href="/projects" className={styles.animation}>Projects</Link>
       </div>
 
 
@@ -101,16 +102,16 @@ export default function Home() {
       <div className={styles.cont}>
       <div className={styles.socials}>
         <Link href="https://www.youtube.com/user/TheMrKofiX" className={styles.icon} target="_blank" rel="noopener noreferrer">
-          <Image src="youtube.svg" width={socialsize} height={socialsize} alt="YouTube"></Image>
+          <Image style={{width: 'auto', height: '5vh',}} src={youtube} alt="YouTube"></Image>
         </Link>
         <Link href="https://www.linkedin.com/in/nicholas-erup-larsen-a2134010b/" className={styles.icon} target="_blank" rel="noopener noreferrer">
-          <Image src="linkedin.svg" width={socialsize} height={socialsize} alt="LinkedIn"></Image>
+          <Image style={{width: 'auto', height: '5vh',}} src={linkedin} alt="LinkedIn"></Image>
         </Link>
         <Link href="https://twitter.com/olasbondolas" className={styles.icon} target="_blank" rel="noopener noreferrer">
-          <Image src="twitter.svg" width={socialsize} height={socialsize} alt="Twitter"></Image>
+          <Image style={{width: 'auto', height: '5vh',}} src={twitter} alt="Twitter"></Image>
         </Link>
         <Link href="https://github.com/olasbondolas" className={styles.icon} target="_blank" rel="noopener noreferrer">
-          <Image src="github.svg" width={socialsize} height={socialsize} alt="Discord"></Image>
+          <Image style={{width: 'auto', height: '5vh',}} src={github} alt="GitHub"></Image>
         </Link>
       </div>
       </div>
@@ -118,7 +119,7 @@ export default function Home() {
       {/* Grid at the bottom */}
       <div className={styles.cont}>
       <div className={styles.grid}>
-        <Link href="/" className={styles.card}>
+        <Link href="/projects" className={styles.card}>
           <h2>
             Projects <span>-&gt;</span>
           </h2>
@@ -127,35 +128,35 @@ export default function Home() {
       </div>
       </div>
       <div className={styles.cont}>
-      <div className={styles.ranks}>
-        <div className={styles.ranksimg} >
-        {/* <img src="diamond.webp" min-width="40%" max-width="40%" width="40%" height="40%"  decoding="async" alt="Diamond 4"/> */}
-        <Image className={styles.ranksimg} src={diamond} width={192} height={155} decoding="async" alt="Diamond 4" loader={loaderProp}/>
-          <h4>Diamond 4</h4>
-          <h6>
-            Ladder rank: 36,826 (top <Link 
-            target="_blank" rel="noopener noreferrer"
-            href="https://cdn.discordapp.com/attachments/611591746635431964/1179169668737540228/IMG_4077.JPG?ex=6578ce54&is=65665954&hm=a88f9dceb6640b1be26803df8e864aa6628111861be7d3e200236cc827e1349b&" 
-            className={styles.animation}>1.13%</Link>)<br/>
-            Date achieved: July 17, 2023<br/><br/>
-            League of Legends
-          </h6>
+        <div className={styles.ranks}>
+          <div className={styles.ranksimg} >
+          {/* <img src="diamond.webp" min-width="40%" max-width="40%" width="40%" height="40%"  decoding="async" alt="Diamond 4"/> */}
+          <Image style={{width: 'auto', height: '15vh',}} src={diamond} decoding="async" alt="Diamond 4" loader={loaderProp}/>
+            <h4>Diamond 4</h4>
+            <h6>
+              Ladder rank: 36,826 (top <Link 
+              target="_blank" rel="noopener noreferrer"
+              href="https://cdn.discordapp.com/attachments/611591746635431964/1179169668737540228/IMG_4077.JPG?ex=6578ce54&is=65665954&hm=a88f9dceb6640b1be26803df8e864aa6628111861be7d3e200236cc827e1349b&" 
+              className={styles.animation}>1.13%</Link>)<br/>
+              Date achieved: July 17, 2023<br/><br/>
+              League of Legends
+            </h6>
+          </div>
+          
+          <div className={styles.ranksimg} >
+            {/* <img src="gladiator.webp" min-width="250px" max-width="250px" width="25%" height="25%" decoding="async" alt="Gladiator"/> */}
+            <Image src={gladiator} style={{width: 'auto', height: '15vh',}} decoding="async" alt="Gladiator" loader={loaderProp}/>
+            <h4>2406 rated Elite (2v2)</h4>
+            <h6>
+              Ladder rank: 1353 (top &#126;<Link 
+              target="_blank" rel="noopener noreferrer"
+              href="https://ibb.co/gwRfHNY" 
+              className={styles.animation}>0.47%</Link>)<br/>
+              Date achieved: May 22, 2022<br/><br/>
+              World of Warcraft: Shadowlands
+            </h6>
+          </div>
         </div>
-        
-        <div className={styles.ranksimg} >
-          {/* <img src="gladiator.webp" min-width="250px" max-width="250px" width="25%" height="25%" decoding="async" alt="Gladiator"/> */}
-          <Image src={gladiator} width={130} height={155} decoding="async" alt="Gladiator" loader={loaderProp}/>
-          <h4>2406 rated Elite (2v2)</h4>
-          <h6>
-            Ladder rank: 1353 (top &#126;<Link 
-            target="_blank" rel="noopener noreferrer"
-            href="https://ibb.co/gwRfHNY" 
-            className={styles.animation}>0.47%</Link>)<br/>
-            Date achieved: May 22, 2022<br/><br/>
-            World of Warcraft: Shadowlands
-          </h6>
-        </div>
-      </div>
       </div>
       
 
