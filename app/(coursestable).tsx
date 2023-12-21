@@ -35,7 +35,9 @@ const CoursesTable = () => {
         { name: '• Advanced engineering mathematics 1', result: "^", avg: "^", ects: 10, link: "https://kurser.dtu.dk/course/01005" },
         { name: '• Discrete Mathematics', result: 7, avg: "6.9", ects: 5, link: "https://karakterer.dtu.dk/Histogram/1/01017/Winter-2022" },
         { name: '• Introduction to intelligent systems', result: 7, avg: "8.0", ects: 10, link: "https://karakterer.dtu.dk/Histogram/1/02461/Winter-2022" },
-        { name: '• Introduction to programming & data processing', result: 12, avg: " ", ects: 5, link: "https://kurser.dtu.dk/course/02631" }
+        { name: '• Introduction to programming & data processing', result: 12, avg: " ", ects: 5, link: "https://kurser.dtu.dk/course/02631" },
+        { name: ''},
+
       ]
     }
   ];
@@ -49,9 +51,9 @@ const CoursesTable = () => {
         <thead>
           <tr>
             <th className={styles.tableHeader}>Course</th>
-            <th className={styles.tableHeaderResult}>Grade</th>
+            {/* <th className={styles.tableHeaderResult}>Grade</th>
             <th className={styles.tableHeaderResult}>Avg.</th>
-            <th className={styles.tableHeaderResult}>ECTS</th>
+            <th className={styles.tableHeaderResult}>ECTS</th> */}
           </tr>
         </thead>
         <tbody>
@@ -65,9 +67,9 @@ const CoursesTable = () => {
               {term.courses.map((course, courseIndex) => (
                 <tr key={courseIndex}>
                   <td className={styles.tableData}>{course.name}</td>
-                  <td className={styles.tableResult}>{course.result}</td>
+                  {/* <td className={styles.tableResult}>{course.result}</td>
                   <td className={styles.tableResult}><a className={styles.animation} href={course.link} target="_blank" rel="noopener noreferrer">{course.avg}</a></td>
-                  <td className={styles.tableResult}>{course.ects}</td>
+                  <td className={styles.tableResult}>{course.ects}</td> */}
                 </tr>
               ))}
             </React.Fragment>

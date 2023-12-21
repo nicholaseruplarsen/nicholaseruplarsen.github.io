@@ -40,7 +40,7 @@ export default function Home() {
       {/* Header */}
       <div className={styles.header}>
         <h1 className={styles.header}>Nicholas Erup Larsen</h1><br/>
-        <h4 className={styles.header}>4th semester, studying AI &amp; Data at DTU. 21 years old. <Image src="danish.svg" width={15} height={10} alt="Flag"/></h4>
+        <h4 className={styles.header}>4th semester, studying AI & Data at DTU. 21 years old. <Image src="danish.svg" width={15} height={10} alt="Flag"/></h4>
       </div>
 
 
@@ -61,7 +61,7 @@ export default function Home() {
           <div className={styles.timespan}>2021 to 2022</div>
           <div className={styles.ico}>
             <div className={styles.entry_dot}>
-              <Image src="CVPL logo.svg" width={timelinesize} height={timelinesize}  alt="CVPL logo" />
+              <Image src="CVPL logo.svg" width={timelinesize} height={timelinesize} alt="CVPL logo" />
             </div>
           </div>
           <div className={styles.desc}>
@@ -79,7 +79,25 @@ export default function Home() {
             </p>
           </div>
 
-          <div className={styles.timespan}>2014 to 2021</div>
+          <div className={styles.timespan}>2018 to 2021</div>
+          <div className={styles.ico}>
+            <div className={styles.entry_dot}>
+              <Image src="Niels brock logo.svg" width={timelinesize} height={timelinesize} alt="HHX logo" />
+            </div>
+          </div>
+          <div className={styles.desc}>
+            <h2>Business & Science Elite (HHX)</h2>
+            <h6>Niels Brock DIG</h6>
+            <p>
+            • Mathematics A <br />
+            • Microeconomics A <br />
+            • Macroecoomics A <br />
+            • English A <br />
+            • Danish A <br />
+            </p>
+          </div>
+
+          <div className={styles.timespan}>2014 to today</div>
           <div className={styles.fadeico}>
             <div className={styles.entry_dot}></div>
               <Image src="Adobe logo (gradient).svg" className={styles.imgLight} width={timelinesize} height={timelinesize}  alt="Adobe logo" />
