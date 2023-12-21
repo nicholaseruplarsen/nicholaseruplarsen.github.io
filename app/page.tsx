@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 import Link from 'next/link';
-import CoursesTable from './coursestable';
+import CoursesTable from './(coursestable)';
 import { useRouter } from 'next/navigation'
 import gladiator from '/public/static/gladiator.webp'
 import diamond from '../public/static/diamond.webp'
@@ -39,17 +39,19 @@ export default function Home() {
       {/* Header */}
       <div className={styles.header}>
         <h1 className={styles.header}>Nicholas Erup Larsen</h1><br/>
-        <h4 className={styles.header}>4th semester, studying AI &amp; Data at DTU. 21 years old.</h4>
+        <h4 className={styles.header}>4th semester, studying AI &amp; Data at DTU. 21 years old. <Image src="danish.svg" width={15} height={10} alt="Flag"/></h4>
       </div>
 
 
       {/* Timeline - maybe split into education and work?*/}
-      <div id="history" className={styles.container}>
+      <div className={styles.cont}>
+      <div id="timeline" className={styles.container}>
         <div className={styles.row}>
           <div className={styles.timespan}>Today</div>
           <div className={styles.ico}>
-            <div className={styles.entry_dot} />
-              <Image src="DTU logo.svg" className={styles.imgLight} width={timelinesize} height={timelinesize} alt="DTU logo"></Image>
+            <div className={styles.entry_dot}>
+              <Image src="DTU logo.svg" className={styles.imgLight} width={timelinesize} height={timelinesize} alt="DTU logo" />
+            </div>
           </div>
           <div className={styles.desc}>
             <CoursesTable />
@@ -58,7 +60,7 @@ export default function Home() {
           <div className={styles.timespan}>2021 to 2022</div>
           <div className={styles.ico}>
             <div className={styles.entry_dot}>
-              <Image src="CVPL logo.svg" className={styles.imgLight} width={timelinesize} height={timelinesize}  alt="CVPL logo"></Image>
+              <Image src="CVPL logo.svg" width={timelinesize} height={timelinesize}  alt="CVPL logo" />
             </div>
           </div>
           <div className={styles.desc}>
@@ -78,23 +80,25 @@ export default function Home() {
 
           <div className={styles.timespan}>2014 to 2021</div>
           <div className={styles.fadeico}>
-            <div className={styles.entry_dot} />
-              <Image src="Adobe logo (gradient).svg" className={styles.imgLight} width={timelinesize} height={timelinesize}  alt="Adobe logo"></Image>
-            </div>
+            <div className={styles.entry_dot}></div>
+              <Image src="Adobe logo (gradient).svg" className={styles.imgLight} width={timelinesize} height={timelinesize}  alt="Adobe logo" />
+          </div>
             <div className={styles.desc}>
               <h2>Video editing and thumbnail creation</h2>
               <h6>Freelance for YouTubers / Twitch Streamers (50-500k YT subcribers)</h6>
               <p>
               • 4-5.5 million total accumulated views on my own channel and others<br />
-              • Used Adobe Premiere Pro as primary editing tool for all videos. Some of my work:&nbsp; <Link className={styles.animation} href="https://www.youtube.com/watch?v=Vg8a9jWai_g">&quot;Project Fire&quot; #1</Link>,&nbsp;&nbsp;
-              <Link className={styles.animation} href="https://www.youtube.com/watch?v=TRU7F8gcCyE">&quot;Project Fire&quot; #2</Link><br />
+              • Used Adobe Premiere Pro as primary editing tool for all videos. Some of my work:&nbsp; <Link className={styles.animation} href="https://www.youtube.com/watch?v=Vg8a9jWai_g" target="_blank" rel="noopener noreferrer">&quot;Project Fire&quot; #1</Link>,&nbsp;&nbsp;
+              <Link className={styles.animation} href="https://www.youtube.com/watch?v=TRU7F8gcCyE" target="_blank" rel="noopener noreferrer">&quot;Project Fire&quot; #2</Link><br />
               • Proficient in Adobe Photoshop to create mainly thumbnails and other general purpose stuff since I was 11 years old<br />
               </p>
             </div>
         </div>
       </div>
+      </div>
 
       {/* Social media links */}
+      <div className={styles.cont}>
       <div className={styles.socials}>
         <Link href="https://www.youtube.com/user/TheMrKofiX" className={styles.icon} target="_blank" rel="noopener noreferrer">
           <Image src="youtube.svg" width={socialsize} height={socialsize} alt="YouTube"></Image>
@@ -109,8 +113,10 @@ export default function Home() {
           <Image src="github.svg" width={socialsize} height={socialsize} alt="Discord"></Image>
         </Link>
       </div>
+      </div>
 
       {/* Grid at the bottom */}
+      <div className={styles.cont}>
       <div className={styles.grid}>
         <Link href="/" className={styles.card}>
           <h2>
@@ -119,7 +125,8 @@ export default function Home() {
           <p>Check out some of what I have done</p>
         </Link>
       </div>
-
+      </div>
+      <div className={styles.cont}>
       <div className={styles.ranks}>
         <div className={styles.ranksimg} >
         {/* <img src="diamond.webp" min-width="40%" max-width="40%" width="40%" height="40%"  decoding="async" alt="Diamond 4"/> */}
@@ -149,6 +156,8 @@ export default function Home() {
           </h6>
         </div>
       </div>
+      </div>
+      
 
     </main>
   )
