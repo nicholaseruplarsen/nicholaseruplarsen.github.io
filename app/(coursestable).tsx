@@ -51,9 +51,9 @@ const CoursesTable = () => {
         <thead>
           <tr>
             <th className={styles.tableHeader}>Course</th>
-            {/* <th className={styles.tableHeaderResult}>Grade</th>
-            <th className={styles.tableHeaderResult}>Avg.</th>
-            <th className={styles.tableHeaderResult}>ECTS</th> */}
+            {/* <th className={styles.tableHeaderResult}>Grade</th> */}
+            {/* <th className={styles.tableHeaderResult}>Avg.</th> */}
+            <th className={styles.tableHeaderResult}>ECTS</th>
           </tr>
         </thead>
         <tbody>
@@ -67,9 +67,9 @@ const CoursesTable = () => {
               {term.courses.map((course, courseIndex) => (
                 <tr key={courseIndex}>
                   <td className={styles.tableData}>{course.name}</td>
-                  {/* <td className={styles.tableResult}>{course.result}</td>
-                  <td className={styles.tableResult}><a className={styles.animation} href={course.link} target="_blank" rel="noopener noreferrer">{course.avg}</a></td>
-                  <td className={styles.tableResult}>{course.ects}</td> */}
+                  {/* <td className={styles.tableResult}>{course.result}</td> */}
+                  {/* <td className={styles.tableResult}><a className={styles.animation} href={course.link} target="_blank" rel="noopener noreferrer">{course.avg}</a></td> */}
+                  <td className={styles.tableResult}>{course.ects}</td>
                 </tr>
               ))}
             </React.Fragment>

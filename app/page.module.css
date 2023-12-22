@@ -357,13 +357,6 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .vercelLogo,
-  .logo { /* Combined the styles for .vercelLogo and .logo */
-    filter: invert(1);
-  }
-  .logo {
-    box-shadow: 0 0 0.3rem #ffffff70; /* Changed drop-shadow to box-shadow for better cross-browser support */
-  }
 }
 
 @keyframes rotate {
