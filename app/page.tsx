@@ -164,9 +164,11 @@ export default function Home() {
       <div className={styles.cont}>
         <div className={styles.ranks}>
           <div className={styles.ranksimg} >
-          {/* <img src="diamond.webp" min-width="40%" max-width="40%" width="40%" height="40%"  decoding="async" alt="Diamond 4"/> */}
-          <Image style={{width: 'auto', height: '15vh',}} src={diamond} decoding="async" alt="Diamond 4" loader={loaderProp}/>
-            <h4>Diamond 4</h4>
+            {/* <img src="/static/diamond.webp" min-width="40%" max-width="40%" width="40%" height="40%"  decoding="async" alt="Diamond 4"/> */}
+            <div className={styles.ranksimg} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+              <Image style={{ width: 'auto', height: '10vh' }} src={diamond} decoding="async" alt="Diamond 4" loader={loaderProp} />
+            </div>
+              <h4>Diamond 4</h4>
             <h6>
               Ladder rank: 36,826 (top <Link 
               target="_blank" rel="noopener noreferrer"
@@ -178,8 +180,8 @@ export default function Home() {
           </div>
           
           <div className={styles.ranksimg} >
-            {/* <img src="gladiator.webp" min-width="250px" max-width="250px" width="25%" height="25%" decoding="async" alt="Gladiator"/> */}
-            <Image src={gladiator} style={{width: 'auto', height: '15vh',}} decoding="async" alt="Gladiator" loader={loaderProp}/>
+            {/* <img src="/static/gladiator.webp" min-width="250px" max-width="250px" width="25%" height="25%" decoding="async" alt="Gladiator"/> */}
+            <Image src={gladiator} style={{width: 'auto', height: '10vh'}} decoding="async" alt="Gladiator" loader={loaderProp}/>
             <h4>2406 rated Elite (2v2)</h4>
             <h6>
               Ladder rank: 1353 (top &#126;<Link 

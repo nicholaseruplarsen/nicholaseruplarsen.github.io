@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 2rem auto 6rem;  /* Combined padding-top with other paddings */
+  min-height: 100vh;
   font-size: 15px;
 }
 
@@ -15,7 +16,7 @@
 }
 
 .cont {
-  margin: 5vh;
+  margin: 3vw;
 }
 
 .backgroundImage {
@@ -28,12 +29,10 @@
   z-index: -1;
   top: 30%;
   right: 0;
-  transform: rotateX(180deg); /* FLIP */
 }
 
 .nav {
   display: flex;
-  padding: 1rem 0;  /* Combined padding-top with padding-bottom */
   font-size: 16px;
 }
 
@@ -65,10 +64,12 @@
   transform-origin: bottom left;
 }
 
+
 .header {
   margin-top: 1rem;
   display: inline;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .header h1 {
@@ -137,14 +138,15 @@
   line-height: 150%;
   min-width: 0rem; /* FIXED EVERYTHING WHEN RESIZING*/
   max-width: 60rem;
+  margin-right: 5rem;
 }
 
-.container h1, /* Combine shared styles for h1, h2 */
+.container h1,
 .container h2 {
   background-image: linear-gradient(60deg,#f83a3a 10%,#f13dd4 30%,#7000ff 90%);
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent; /* Changed for better browser support */
+  color: transparent;
 
   font-weight: 600;
   font-size: 20px;
@@ -161,7 +163,7 @@
   font-weight: 500;
   text-align: right;
   color: var(--timeline-color);
-  min-width: 6.5em;
+  min-width: 6.6em;
   margin-right: 1rem;
 }
 
@@ -223,12 +225,12 @@
 }
 
 .ranksimg {
-  margin-left: 10vw;
-  margin-right: 10vw;
+  margin-left: 7vw;
+  margin-right: 7vw;
 }
 
 .ranks img {
-  margin-bottom: 1rem;
+  margin: 1rem;
 }
 
 .ranks h4 {
@@ -265,8 +267,19 @@
     font-size: 11px; 
     line-height: 140%;
   }
+  
+  .nav {
+    margin-bottom: 1rem;
+  }
+
+  .nav a {
+    font-size: 14px;
+    margin: 0.5rem;
+    margin-bottom: 0;
+  }
 
   .header {
+    margin-top: 1vw;
     margin-bottom: 5vw;
   }
 
@@ -283,6 +296,14 @@
   .ranks h4,
   .ranks h6 {
     padding-bottom: 0.2rem;
+  }
+
+  .ranksimg {
+    margin: 0;
+  }
+  .container {
+    margin-right: 0rem;
+
   }
 
   .container h2 {
@@ -322,10 +343,6 @@
     display: none;
   }
 
-  .ranksimg {
-    margin: 2vw;
-  }
-
   .socials {
     width: 100vw;
   }
@@ -333,13 +350,6 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .vercelLogo,
-  .logo { /* Combined the styles for .vercelLogo and .logo */
-    filter: invert(1);
-  }
-  .logo {
-    box-shadow: 0 0 0.3rem #ffffff70; /* Changed drop-shadow to box-shadow for better cross-browser support */
-  }
 }
 
 @keyframes rotate {
