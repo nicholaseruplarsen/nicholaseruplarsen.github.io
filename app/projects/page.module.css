@@ -6,6 +6,7 @@
   margin: 2rem auto 6rem;  /* Combined padding-top with other paddings */
   min-height: 100vh;
   font-size: 15px;
+  color: #ffffff;
 }
 
 .main h6 {

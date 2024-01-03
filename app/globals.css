@@ -53,7 +53,14 @@ a {
 
 @media (prefers-color-scheme: light) {
   html {
-    color-scheme: dark;
+    --background-start-rgb: 5, 1, 13;
+    --background-end-rgb: 5, 1, 13;
+
+    --timeline-color: white;
+    --border-color: #04010c;
+
+    --border-radius: 12px;
+
   }
 }
 
