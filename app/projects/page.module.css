@@ -1,7 +1,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   margin: 2rem auto 6rem;  /* Combined padding-top with other paddings */
   min-height: 100vh;
@@ -90,17 +90,27 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 100%;  /* Simplified the repeat function */
-  gap: 2rem;
-  align-items: center;
+  grid-template-columns: repeat(2, minmax(50%, auto));
+  max-width: 100%;
+  width: var(--max-width);
+  margin-top: 3rem;
 }
 
 .card {
   padding: 1rem 1.2rem;
+  margin: 1rem;
   border-radius: var(--border-radius);
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
   transition: background 200ms, border 200ms;
+  max-width: 30ch;
+}
+
+.card img {
+  display: block; /* This ensures the image takes up the full width of its line */
+  width: 100%; /* Make the image responsive to the card's width */
+  height: auto; /* Maintain the aspect ratio of the image */
+  object-fit: cover; /* This will cover the area of the container without stretching the image */
 }
 
 .card span {
@@ -116,132 +126,6 @@
 .card p {
   margin: 0;
   color: #717890;
-  max-width: 30ch;
-}
-
-.socials {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80vw;
-  max-width: 60rem;
-}
-
-.socials a {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-/* Timeline */
-.container {
-  line-height: 150%;
-  min-width: 0rem; /* FIXED EVERYTHING WHEN RESIZING*/
-  max-width: 60rem;
-  margin-right: 5rem;
-}
-
-.container h1,
-.container h2 {
-  background-image: linear-gradient(60deg,#f83a3a 10%,#f13dd4 30%,#7000ff 90%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-
-  font-weight: 600;
-  font-size: 20px;
-}
-
-.row {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
-
-/* Today, 2021 to 2022, etc. */
-.timespan {
-  grid-column: span 1;
-  font-weight: 500;
-  text-align: right;
-  color: var(--timeline-color);
-  min-width: 6.6em;
-  margin-right: 1rem;
-}
-
-.desc {
-  grid-column: span 10;
-  padding-top: 2px;
-  padding-bottom: 5vh;
-  word-wrap: break-word;
-}
-
-.ico {
-  top: 5px;
-  border-left: 2px solid var(--timeline-color);
-  position: relative;
-}
-
-.fadeico {
-  top: 5px;
-  border-left: 2px solid;
-  border-image: 
-  linear-gradient(
-    to bottom, 
-    var(--timeline-color) 0%,
-    rgba(0, 0, 0, 0)
-  ) 1 100%;
-  position: relative;
-}
-
-.ico img {
-  margin-left: .7em;
-}
-
-.fadeico img {
-  margin-top: -1em;
-  margin-left: .5em;
-}
-
-.entry_dot {
-  position: relative;
-  left: -8px;
-  top: -1px;
-  width: 14px;
-  height: 14px;
-  border-radius: 10px;
-  background: var(--timeline-color);
-  border: 2px solid var(--border-color);
-  /* border: 2 solid transparent; */
-  /* border-image: url('../public/bg.webp') 30 round; */
-
-}
-/* Timeline */
-
-
-.ranks {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(50%, auto));
-  align-items: center;
-  text-align: center;
-}
-
-.ranksimg {
-  margin-left: 7vw;
-  margin-right: 7vw;
-}
-
-.ranks img {
-  margin: 1rem;
-}
-
-.ranks h4 {
-  padding-bottom: 1rem;
-  color: #ffffff;
-}
-
-.ranks h6 {
-  padding-bottom: 0.5rem;
-  color: #717890;
-  white-space: nowrap;
 }
 
 
