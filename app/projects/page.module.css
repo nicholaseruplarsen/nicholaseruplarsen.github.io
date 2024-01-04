@@ -121,13 +121,26 @@
 
 .card h2 {
   font-weight: 600;
-  margin-bottom: 0.7rem;
+  margin-bottom: 1rem;
 }
 
 .card p {
   margin: 0;
   color: #717890;
+  text-align: justify;
+  hyphens: auto;
 }
+
+.card img {
+  margin-bottom: .5rem;
+}
+
+.card h6 {
+  color: #fff;
+  opacity: 0.3;
+  text-align: left;
+}
+
 
 
 
