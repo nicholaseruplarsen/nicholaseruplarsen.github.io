@@ -137,10 +137,10 @@ export default function Home() {
         <Link href="https://www.linkedin.com/in/nicholas-erup-larsen-a2134010b/" className={styles.icon} target="_blank" rel="noopener noreferrer">
           <Image style={{width: 'auto', height: '5vh',}} src={linkedin} alt="LinkedIn"></Image>
         </Link>
-        <Link href="https://twitter.com/olasbondolas" className={styles.icon} target="_blank" rel="noopener noreferrer">
+        {/* <Link href="https://twitter.com/olasbondolas" className={styles.icon} target="_blank" rel="noopener noreferrer">
           <Image style={{width: 'auto', height: '5vh',}} src={twitter} alt="Twitter"></Image>
-        </Link>
-        <Link href="https://github.com/olasbondolas" className={styles.icon} target="_blank" rel="noopener noreferrer">
+        </Link> */}
+        <Link href="https://github.com/nicholaseruplarsen" className={styles.icon} target="_blank" rel="noopener noreferrer">
           <Image style={{width: 'auto', height: '5vh',}} src={github} alt="GitHub"></Image>
         </Link>
       </div>
