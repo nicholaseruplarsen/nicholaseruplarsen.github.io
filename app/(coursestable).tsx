@@ -7,7 +7,8 @@ const CoursesTable = () => {
       term: '4th semester', examPeriod: 'Spring 2024', courses: [
         { name: '• Active machine learning and agency', result: '?', avg: " ", ects: 5, link: "https://kurser.dtu.dk/course/02463" },
         { name: '• Introduction to reinforcement learning and control', result: '?', avg: " ", ects: 5, link: "https://kurser.dtu.dk/course/02465" },
-        { name: '• Bioengineering (Polytechnical Foundation)', result: '?', avg: " ", ects: 5, link: "https://kurser.dtu.dk/course/27020" },
+        { name: '• Symbolic Artificial Intelligence', result: '?', avg: " ", ects: 5, link: "https://kurser.dtu.dk/course/02182" },
+        { name: '• Database Systems', result: '?', avg: " ", ects: 5, link: "https://kurser.dtu.dk/course/02170" },
         { name: '• Project work', result: '?', avg: " ", ects: 10, link: "https://kurser.dtu.dk/course/02466" },
         { name: '• Physics 1', result: '?', avg: " ", ects: 10, link: "https://kurser.dtu.dk/course/10024" }
       ]
