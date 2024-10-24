@@ -62,7 +62,7 @@ export default function Home() {
         <a href="https://nicholaseruplarsen.github.io/aet" target="_blank" rel="noopener noreferrer" className={styles.card}>
           <Image src={thumbnail} alt="Stock Website" className={styles.cardImage} />
           <h2>Stock Website <span>-&gt;</span></h2>
-          <p>The only website in the world to display a stock alongside its dynamically updating financials as far as I'm aware.</p>
+          <p>The only website in the world to display a stock alongside its dynamically updating financials as far as I&apos;m aware.</p>
         </a>
         <a href="/arxiv-1712.pdf" target="_blank" rel="noopener noreferrer" className={styles.card}>
           <Image src={thumbnail2} alt="Stock Website" className={styles.cardImage} />
