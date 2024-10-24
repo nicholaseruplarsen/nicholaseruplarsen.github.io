@@ -195,7 +195,7 @@ export default function Home() {
             <h6>
               Ladder rank: 36,826 (top <Link 
               target="_blank" rel="noopener noreferrer"
-              href="http://localhost:3000/IMG_4077.jpg" 
+              href="/IMG_4077.jpg" 
               className={styles.animation}>1.13%</Link>)<br/>
               Date achieved: July 17, 2023<br/><br/>
               League of Legends
