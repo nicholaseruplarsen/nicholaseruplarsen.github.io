@@ -64,3 +64,77 @@ a {
   }
 }
 
+
+/* Card Styles */
+.card {
+  padding: 1rem 1.2rem;
+  margin: 1rem;
+  border-radius: var(--border-radius);
+  background: rgba(var(--card-rgb), 0);
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+  transition: background 200ms, border 200ms;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  max-width: 400px; /* Prevent cards from getting too wide */
+}
+
+.card h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card p {
+  margin: 0;
+  color: #717890;
+  /* text-align: justify; */
+  hyphens: auto;
+  max-width: 100%;
+}
+
+.card span {
+  display: inline-block;
+  transition: transform 200ms;
+}
+
+.cardImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1%;
+  margin: auto;
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 5%;
+}
+
+/* Card hover effects */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
+
+  .card:hover span {
+    transform: translateX(4px);
+  }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .cardGrid {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+
+  }
+  
+  .card {
+    margin: 0.5rem 0;
+  }
+}

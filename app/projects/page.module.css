@@ -32,19 +32,12 @@
   right: 0;
 }
 
-.nav {
-  display: flex;
-  font-size: 16px;
-}
 
-.nav a {
-  margin: 1rem;
-}
 
 .animation {
   display: inline-block; 
   position: relative;
-  color: #fff;
+  color: #717890;
 }
 
 .animation:after {
@@ -52,10 +45,10 @@
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
+  height: 0.5px;
+  bottom: -2px;
   left: 0;
-  background-color: #fff;
+  background-color: #717890;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -94,7 +87,6 @@
   grid-template-columns: repeat(2, minmax(50%, auto));
   max-width: 100%;
   width: var(--max-width);
-  margin-top: 3rem;
 }
 
 .card {
@@ -164,16 +156,6 @@
   .main p {
     font-size: 11px; 
     line-height: 140%;
-  }
-  
-  .nav {
-    margin-bottom: 1rem;
-  }
-
-  .nav a {
-    font-size: 14px;
-    margin: 0.5rem;
-    margin-bottom: 0;
   }
 
   .header {
@@ -282,4 +264,14 @@
   .card:hover span {
     transform: none;
   }
+}
+
+.nav {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.goBack {
+  font-size: 0.8rem;
 }

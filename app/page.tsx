@@ -11,6 +11,8 @@ import linkedin from '../public/svgs/linkedin.svg';
 import twitter from '../public/svgs/twitter.svg';
 import github from '../public/svgs/github.svg';
 import profilbillede from '../public/Profilbillede.png';
+import thumbnail from '../public/static/thumbnail.webp';
+import thumbnail2 from '../public/static/thumbnail2.webp';
 
 export default function Home() {
   const timelinesize = 135;
@@ -32,16 +34,16 @@ export default function Home() {
       <div className={styles.backgroundImage} />
 
       {/* Navigation bar */}
-      <div className={styles.nav}>
+      {/* <div className={styles.nav}>
         <Link href="/" className={styles.animation}>Home</Link>
         <Link href="/projects" className={styles.animation}>Projects</Link>
-      </div>
+      </div> */}
 
 
       {/* Header without profile picture */}
       <div className={styles.header}>
         <h1 className={styles.header}>Nicholas Erup Larsen</h1><br/>
-        <h4 className={styles.header}>4th semester, studying AI & Data at DTU. 21 years old. <Image src="danish.svg" width={15} height={10} alt="Flag"/></h4>
+        <h4 className={styles.header}>5th semester, studying AI & Data at DTU. 22 years old. <Image src="danish.svg" width={15} height={10} alt="Flag"/></h4>
       </div>
 
       {/* Header with profile picture */}
@@ -55,6 +57,27 @@ export default function Home() {
         </div>
       </div> */}
 
+      {/* Cards */}
+      <div className={styles.cardGrid}>
+        <a href="https://nicholaseruplarsen.github.io/aet" target="_blank" rel="noopener noreferrer" className={styles.card}>
+          <Image src={thumbnail} alt="Stock Website" className={styles.cardImage} />
+          <h2>Stock Website <span>-&gt;</span></h2>
+          <p>The only website in the world to display a stock alongside its dynamically updating financials as far as I'm aware.</p>
+        </a>
+        <a href="/arxiv-1712.pdf" target="_blank" rel="noopener noreferrer" className={styles.card}>
+          <Image src={thumbnail2} alt="Stock Website" className={styles.cardImage} />
+          <h2>Self-Supervised Learning for Time Series <span>-&gt;</span></h2>
+          <p>Achieving the best results of any known open-source model on multivariate regression and promising results in multiple/linear regression on time series price data. First paper written.</p>
+        </a>
+        {/* <a href="https://nicholaseruplarsen.github.io/aet" className={styles.card}>
+          <h2>Optimal workout app<span>-&gt;</span></h2>
+          <p>Unfinished, working on this</p>
+        </a>
+        <a href="https://nicholaseruplarsen.github.io/aet" className={styles.card}>
+          <h2>Coming soon...<span>-&gt;</span></h2>
+          <p> </p>
+        </a> */}
+      </div>
 
       {/* Timeline - maybe split into education and work?*/}
       <div className={styles.cont}>
@@ -131,7 +154,7 @@ export default function Home() {
       {/* Social media links */}
       <div className={styles.cont}>
       <div className={styles.socials}>
-        <Link href="https://www.youtube.com/user/TheMrKofiX" className={styles.icon} target="_blank" rel="noopener noreferrer">
+        <Link href="https://www.youtube.com/user/TheMrKofiX/about" className={styles.icon} target="_blank" rel="noopener noreferrer">
           <Image style={{width: 'auto', height: '5vh',}} src={youtube} alt="YouTube"></Image>
         </Link>
         <Link href="https://www.linkedin.com/in/nicholas-erup-larsen-a2134010b/" className={styles.icon} target="_blank" rel="noopener noreferrer">
@@ -154,7 +177,7 @@ export default function Home() {
           <h2>
             Projects <span>-&gt;</span>
           </h2>
-          <p>Check out some of what I have done</p>
+          <p>Check out other stuff I have done</p>
         </Link>
       </div>
       </div>
@@ -172,7 +195,7 @@ export default function Home() {
             <h6>
               Ladder rank: 36,826 (top <Link 
               target="_blank" rel="noopener noreferrer"
-              href="https://cdn.discordapp.com/attachments/611591746635431964/1179169668737540228/IMG_4077.JPG?ex=6578ce54&is=65665954&hm=a88f9dceb6640b1be26803df8e864aa6628111861be7d3e200236cc827e1349b&" 
+              href="http://localhost:3000/IMG_4077.jpg" 
               className={styles.animation}>1.13%</Link>)<br/>
               Date achieved: July 17, 2023<br/><br/>
               League of Legends
@@ -186,7 +209,7 @@ export default function Home() {
             <h6>
               Ladder rank: 1353 (top &#126;<Link 
               target="_blank" rel="noopener noreferrer"
-              href="https://www.reddit.com/r/worldofpvp/comments/looczp/pvp_rating_distribution/" 
+              href="https://www.reddit.com/r/worldofpvp/comments/looczp/pvp_rating_distribution/" // need wayback machine link
               className={styles.animation}>0.47%</Link>)<br/>
               Date achieved: May 22, 2022<br/><br/>
               World of Warcraft: Shadowlands
