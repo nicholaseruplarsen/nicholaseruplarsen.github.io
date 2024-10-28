@@ -12,7 +12,7 @@ import linkedin from '../public/svgs/linkedin.svg';
 import twitter from '../public/svgs/twitter.svg';
 import github from '../public/svgs/github.svg';
 import profilbillede from '../public/Profilbillede.png';
-import thumbnail from '../public/static/thumbnail.webp';
+import thumbnail1 from '../public/static/thumbnail1.webp';
 import thumbnail2 from '../public/static/thumbnail2.webp';
 
 export default function Home() {
@@ -46,7 +46,7 @@ export default function Home() {
       {/* Header without profile picture */}
       <div className={styles.header}>
         <h1 className={styles.header}>Nicholas Erup Larsen</h1><br/>
-        <h4 className={styles.header}>5th semester, looking to move to the US no matter the cost. 22 years old. <Image src="danish.svg" width={15} height={10} alt="Flag"/></h4>
+        <h4 className={styles.header}>Looking to move to the US no matter the cost. 22 years old. <Image src="danish.svg" width={15} height={10} alt="Flag"/></h4>
       </div>
 
       {/* Header with profile picture */}
@@ -63,14 +63,14 @@ export default function Home() {
       {/* Cards */}
       <div className={styles.cardGrid}>
         <a href="https://nicholaseruplarsen.github.io/aet" target="_blank" rel="noopener noreferrer" className={styles.card}>
-          <Image src={thumbnail} alt="Stock Website" className={styles.cardImage} />
+          <Image src={thumbnail1} alt="Stock Website" className={styles.cardImage} />
           <h2>Stock Website <span>-&gt;</span></h2>
           <p>The only website in the world to display a stock alongside its dynamically updating financials as far as I&apos;m aware.</p>
         </a>
         <a href="https://arxiv.org/pdf/2410.18318" target="_blank" rel="noopener noreferrer" className={styles.card}>
           <Image src={thumbnail2} alt="Stock Website" className={styles.cardImage} />
           <h2>Self-Supervised Learning for Time Series <span>-&gt;</span></h2>
-          <p>Achieving the best results of any known open-source model on multivariate regression and promising results in multiple/linear regression on time series price data. First paper written.</p>
+          <p>Achieving state of the art results of all known open-source models on multivariate regression and promising results in multiple/linear regression on time series price data. First paper ever written.</p>
         </a>
         {/* <a href="https://nicholaseruplarsen.github.io/aet" className={styles.card}>
           <h2>Optimal workout app<span>-&gt;</span></h2>
@@ -176,7 +176,7 @@ export default function Home() {
               <h2>Video editing and thumbnail creation</h2>
               <h6>Freelance for YouTubers / Twitch Streamers (50-500k YT subcribers)</h6>
               <p>
-              • 4-5.5 million total accumulated views on my own channel and others<br />
+              • 6+ million total accumulated views on my own channel and others&apos;<br />
               • Used Adobe Premiere Pro as primary editing tool for all videos. Some of my work:&nbsp; <Link className={styles.animation} href="https://www.youtube.com/watch?v=Vg8a9jWai_g" target="_blank" rel="noopener noreferrer">&quot;Project Fire&quot; #1</Link>,&nbsp;&nbsp;
               <Link className={styles.animation} href="https://www.youtube.com/watch?v=TRU7F8gcCyE" target="_blank" rel="noopener noreferrer">&quot;Project Fire&quot; #2</Link><br />
               • Proficient in Adobe Photoshop to create mainly thumbnails and other general purpose stuff since I was 11 years old<br />

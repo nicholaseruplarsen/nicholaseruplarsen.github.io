@@ -4,11 +4,11 @@ import styles from './coursestable.module.css';
 const UTTable = () => {
   const courses = [
     {
-      term: '5th semester', examPeriod: 'Fall 2022', courses: [
+      term: '5th semester', examPeriod: 'Fall 2024', courses: [
         { name: '• Data Science Lab', result: "^", avg: "^", ects: 8, link: "https://kurser.dtu.dk/course/01005" },
         { name: '• Software Design and Implementation I (C Programming)', result: 7, avg: "6.9", ects: 6, link: "https://karakterer.dtu.dk/Histogram/1/01017/Winter-2022" },
         { name: '• Exploring User Interaction', result: 7, avg: "8.0", ects: 6, link: "https://karakterer.dtu.dk/Histogram/1/02461/Winter-2022" },
-        { name: '• Communicating for Executive Leadership', result: 12, avg: " ", ects: 6, link: "https://kurser.dtu.dk/course/02631" },
+        { name: '• Communication for Executive Leadership', result: 12, avg: " ", ects: 6, link: "https://kurser.dtu.dk/course/02631" },
         { name: '• Visual Storytelling', result: 12, avg: " ", ects: 6, link: "https://kurser.dtu.dk/course/02631" },
         { name: ''},
 

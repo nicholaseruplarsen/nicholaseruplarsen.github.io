@@ -419,6 +419,11 @@
   .card:hover span {
     transform: translateX(4px);
   }
+
+  .icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-out;
+  }
 }
 
 /* Media query for smaller screens */
