@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import Link from 'next/link';
 import CoursesTable from './(coursestable)';
+import UTTable from './(uttable)';
 import gladiator from '/public/static/gladiator.webp'
 import diamond from '../public/static/diamond.webp'
 import youtube from '../public/svgs/youtube.svg';
@@ -31,7 +32,9 @@ export default function Home() {
       <link rel="icon" href="image/favicon.ico" sizes="any"/>
       
       {/* Background image */}
-      <div className={styles.backgroundImage} />
+      <div className={styles.backgroundImage}>
+        <span></span>
+      </div>
 
       {/* Navigation bar */}
       {/* <div className={styles.nav}>
@@ -43,7 +46,7 @@ export default function Home() {
       {/* Header without profile picture */}
       <div className={styles.header}>
         <h1 className={styles.header}>Nicholas Erup Larsen</h1><br/>
-        <h4 className={styles.header}>5th semester, studying AI & Data at DTU. 22 years old. <Image src="danish.svg" width={15} height={10} alt="Flag"/></h4>
+        <h4 className={styles.header}>5th semester, looking to move to the US no matter the cost. 22 years old. <Image src="danish.svg" width={15} height={10} alt="Flag"/></h4>
       </div>
 
       {/* Header with profile picture */}
@@ -64,7 +67,7 @@ export default function Home() {
           <h2>Stock Website <span>-&gt;</span></h2>
           <p>The only website in the world to display a stock alongside its dynamically updating financials as far as I&apos;m aware.</p>
         </a>
-        <a href="/arxiv-1712.pdf" target="_blank" rel="noopener noreferrer" className={styles.card}>
+        <a href="https://arxiv.org/pdf/2410.18318" target="_blank" rel="noopener noreferrer" className={styles.card}>
           <Image src={thumbnail2} alt="Stock Website" className={styles.cardImage} />
           <h2>Self-Supervised Learning for Time Series <span>-&gt;</span></h2>
           <p>Achieving the best results of any known open-source model on multivariate regression and promising results in multiple/linear regression on time series price data. First paper written.</p>
@@ -82,8 +85,40 @@ export default function Home() {
       {/* Timeline - maybe split into education and work?*/}
       <div className={styles.cont}>
       <div id="timeline" className={styles.container}>
+      <a
+          href="/Resume_NEL.pdf"
+          download
+          className={styles.resumeButton}
+        >
+          Download Resume (PDF)
+        </a>
         <div className={styles.row}>
-          <div className={styles.timespan}>Today</div>
+        <div className={styles.timespan}>Today</div>
+          <div className={styles.ico}>
+            <div className={styles.entry_dot}>
+              <Image src="UT Austin logo.svg" className={styles.imgLight} width={timelinesize} height={timelinesize} alt="UT Austin logo" />
+            </div>
+          </div>
+          <div className={styles.desc}>
+            <UTTable />
+          </div>
+
+          <div className={styles.timespan}>2024</div>
+          <div className={styles.ico}>
+            <div className={styles.entry_dot}>
+              <Image src="LAG.svg" width={timelinesize} height={timelinesize} alt="LAG" />
+            </div>
+          </div>
+          <div className={styles.desc}>
+            <h2>AI & Fullstack Engineer</h2>
+            <h6>Leadership Advisor Group</h6>
+            <p>
+            • Developed a full-stack, cloud-hosted web application, integrating OpenAI&apos;s API with a custom NLP pipeline under the hood that vastly improved the quality of the LLM output, culminating in a seamless interaction for the end user <br />
+            • Lead the project gathering requirements, defining project scope, and delivering a site that exceeded client expectations<br />
+            </p>
+          </div>
+
+          <div className={styles.timespan}>2022 to 2025</div>
           <div className={styles.ico}>
             <div className={styles.entry_dot}>
               <Image src="DTU logo.svg" className={styles.imgLight} width={timelinesize} height={timelinesize} alt="DTU logo" />
@@ -132,7 +167,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className={styles.timespan}>2014 to today</div>
+          <div className={styles.timespan}>2014 to 2021</div>
           <div className={styles.fadeico}>
             <div className={styles.entry_dot}></div>
               <Image src="Adobe logo (gradient).svg" className={styles.imgLight} width={timelinesize} height={timelinesize}  alt="Adobe logo" />
@@ -195,7 +230,7 @@ export default function Home() {
             <h6>
               Ladder rank: 36,826 (top <Link 
               target="_blank" rel="noopener noreferrer"
-              href="/IMG_4077.jpg" 
+              href="http://localhost:3000/IMG_4077.jpg" 
               className={styles.animation}>1.13%</Link>)<br/>
               Date achieved: July 17, 2023<br/><br/>
               League of Legends

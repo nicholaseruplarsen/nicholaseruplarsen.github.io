@@ -79,7 +79,7 @@
 @media (max-width: 800px) {
   .table {
     font-size: 11px;
-    width: 72vw;
+    /* width: 72vw; */
     line-height: 120%;
     white-space: wrap;
   }
