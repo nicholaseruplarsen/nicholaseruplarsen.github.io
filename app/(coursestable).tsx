@@ -4,6 +4,17 @@ import styles from './coursestable.module.css';
 const CoursesTable = () => {
   const courses = [
     {
+      term: '6th semester', examPeriod: 'Spring 2025', courses: [
+        { name: "• Bachelor thesis", result: '?', avg: " ", ects: 15, link: " " },
+        { name: '• Bioengineering (Polytechnical Foundation)', result: '?', avg: " ", ects: 5, link: "https://kurser.dtu.dk/course/27020" },
+      ]
+    },
+    {
+      term: '5th semester – Exchange', examPeriod: 'Fall 2024', courses: [
+        { name: ' ', result: '?', avg: " ", ects: " ", link: " " }
+      ]
+    },
+    {
       term: '4th semester', examPeriod: 'Spring 2024', courses: [
         { name: '• Active machine learning and agency', result: '?', avg: " ", ects: 5, link: "https://kurser.dtu.dk/course/02463" },
         { name: '• Introduction to reinforcement learning and control', result: '?', avg: " ", ects: 5, link: "https://kurser.dtu.dk/course/02465" },
@@ -34,8 +45,8 @@ const CoursesTable = () => {
     {
       term: '1st semester', examPeriod: 'Fall 2022', courses: [
         { name: '• Advanced engineering mathematics 1', result: "^", avg: "^", ects: 10, link: "https://kurser.dtu.dk/course/01005" },
-        { name: '• Discrete Mathematics', result: 7, avg: "6.9", ects: 5, link: "https://karakterer.dtu.dk/Histogram/1/01017/Winter-2022" },
         { name: '• Introduction to intelligent systems', result: 7, avg: "8.0", ects: 10, link: "https://karakterer.dtu.dk/Histogram/1/02461/Winter-2022" },
+        { name: '• Discrete Mathematics', result: 7, avg: "6.9", ects: 5, link: "https://karakterer.dtu.dk/Histogram/1/01017/Winter-2022" },
         { name: '• Introduction to programming & data processing', result: 12, avg: " ", ects: 5, link: "https://kurser.dtu.dk/course/02631" },
         { name: ''},
 

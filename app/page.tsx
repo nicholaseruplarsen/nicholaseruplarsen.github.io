@@ -85,24 +85,19 @@ export default function Home() {
       {/* Timeline - maybe split into education and work?*/}
       <div className={styles.cont}>
       <div id="timeline" className={styles.container}>
-      <a
-          href="/Resume_NEL.pdf"
-          download
-          className={styles.resumeButton}
-        >
-          Download Resume (PDF)
-        </a>
+      <a href="/Resume_NEL.pdf" download className={styles.resumeButton}>Download Resume (PDF)</a>
         <div className={styles.row}>
-        <div className={styles.timespan}>Today</div>
+          <div className={styles.timespan}>Today</div>
           <div className={styles.ico}>
             <div className={styles.entry_dot}>
-              <Image src="UT Austin logo.svg" className={styles.imgLight} width={timelinesize} height={timelinesize} alt="UT Austin logo" />
             </div>
           </div>
           <div className={styles.desc}>
-            <UTTable />
+            <h2>&nbsp; </h2>
+            <h6>&nbsp; </h6>
+            <p>
+            </p>
           </div>
-
           <div className={styles.timespan}>2024</div>
           <div className={styles.ico}>
             <div className={styles.entry_dot}>
@@ -117,6 +112,16 @@ export default function Home() {
             • Lead the project gathering requirements, defining project scope, and delivering a site that exceeded client expectations<br />
             </p>
           </div>
+        <div className={styles.timespan}>2024</div>
+          <div className={styles.ico}>
+            <div className={styles.entry_dot}>
+              <Image src="UT Austin logo.svg" className={styles.imgLight} width={timelinesize} height={timelinesize} alt="UT Austin logo" />
+            </div>
+          </div>
+          <div className={styles.desc}>
+            <UTTable />
+          </div>
+
 
           <div className={styles.timespan}>2022 to 2025</div>
           <div className={styles.ico}>
@@ -230,7 +235,7 @@ export default function Home() {
             <h6>
               Ladder rank: 36,826 (top <Link 
               target="_blank" rel="noopener noreferrer"
-              href="http://localhost:3000/IMG_4077.jpg" 
+              href="/IMG_4077.jpg" 
               className={styles.animation}>1.13%</Link>)<br/>
               Date achieved: July 17, 2023<br/><br/>
               League of Legends
